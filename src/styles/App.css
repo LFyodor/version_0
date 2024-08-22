@@ -1,0 +1,182 @@
+@font-face {
+    font-family: 'Stay-Str';
+    src: url(../fonts/Stay-Strrrange.otf);
+}
+
+body {
+    background-color: rgb(35, 35, 35);
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+/* Вступление */
+.title {
+    font-family: 'Stay-Str';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 100px;
+    text-align: center;
+    color: black;
+}
+
+.dialog, .description {
+    color: rgb(150, 150, 150);
+    font-size: 20px;
+    text-indent: 50px;
+    margin: 30px;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 700;
+}
+
+.dialog {
+    font-style: italic;
+}
+
+/* Кнопка "Начать с нуля" */
+.beginButton {
+    display: block;
+    font-family: 'Stay-Str';
+    font-weight: 500;
+    font-style: normal;
+    width: 600px;
+    height: 130px;
+    padding: 5px 15px;
+    color: black;
+    font-size: 100px;
+    background-color: rgb(25, 25, 25);
+    cursor: pointer;
+    margin: 20px auto;
+    transition: 1s;
+}
+
+.beginButton:hover {    
+    transform: scale(1.1);
+}
+
+/* Информация о персонаже */
+header {
+    height: 20%;
+    width: 100%;
+    border-bottom: 0.5vh solid;
+}
+
+.nameAndTime {
+    display: flex;
+    justify-content: space-between;
+    height: 50%;
+    padding: 0 5%;
+}
+
+.infoStat {
+    display: flex;
+    justify-content: space-around;
+    height: 50%;
+}
+
+.infoStat div p {
+    margin: 10px;
+}
+
+p {
+    box-sizing: border-box;
+    color: rgb(150, 150, 150);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* Grid на инвентарь и локацию с действиями */
+.table {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    height: 79vh;
+}
+
+/* Информация об инвентаре */
+aside {
+    border-right: 0.5vh solid;
+    grid-area: 1/1;
+}
+
+.item {
+    margin: 0;
+    padding: 5px 10px;
+}
+
+/* Информация о локации и действия */
+.locationAndActions {
+    grid-area: 1/2;
+}
+
+.location {
+    height: auto;
+    border-bottom: 0.5vh solid;
+}
+
+.location, .actions {
+    padding: 10px;
+}
+
+.actions button, .way button {
+    display: block;
+    margin-right: auto;
+    border: 0;
+    background-color: rgb(35, 35, 35);
+    cursor: pointer;
+    margin: 10px;
+    color: rgb(150, 150, 150);
+    font-size: 20px;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 700;
+}
+
+/* Переходы в новое место */
+.way {
+    display: flex;
+    justify-content: space-between;
+    height: 50%;
+    padding: 0 5%;
+}
+
+/* Кнопка ответа */
+.answerButton {
+    display: block;
+    font-family: 'Stay-Str';
+    font-weight: 250;
+    font-style: normal;
+    min-width: 300px;
+    width: auto;
+    min-height: 65px;
+    height: auto;
+    padding: 5px 10px;
+    color: black;
+    font-size: 50px;
+    background-color: rgb(25, 25, 25);
+    cursor: pointer;
+    margin: 20px auto;
+    transition: 1s;
+}
+
+.answerButton:hover {    
+    transform: scale(1.1);
+}
+
+/* Кнопка "Начать с нуля" в финале */
+.beginButton a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Подпись */
+.author {
+    margin-left: 50%;
+    margin-top: 70px;
+}
