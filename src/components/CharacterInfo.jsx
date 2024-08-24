@@ -161,7 +161,9 @@ const CharacterInfo = () => {
         <header>
             <div className="nameAndTime">
                 <h1>{character.characterFirstName} {character.characterLastName}</h1>
-                <p>{light}</p>
+                <p
+                data-tooltip="Свет огня позволяет ориентироваться в темноте. Без огня глаза привыкают к темноте, но на это уходит время."
+                >{light}</p>
                 {character.partPlot.find((part) => part.id === 200 &&
                 character.partPlot.find((part) => part.id === 201))
                 ? <p>Смерть придёт за тобой через {residenceEnd}</p>
@@ -169,17 +171,25 @@ const CharacterInfo = () => {
             </div>
             <div className="infoStat">
                 <div>
-                    <p>{health}</p>
-                    <p>{health === 'Мёртв' ? ' ' : `Чертовски ${condition}`}</p>
+                    <p
+                    data-tooltip="Физическое здоровье"
+                    >{health}</p>
+                    <p
+                    data-tooltip="Физическое состояние"
+                    >{health === 'Мёртв' ? ' ' : `Чертовски ${condition}`}</p>
                 </div>
                 <div>
-                    <p>Способен {strength}</p>
-                    <p>{luckOrNot}</p>
+                    <p
+                    data-tooltip="Физическая сила: зависит от здоровья и состояния"
+                    >Способен {strength}</p>
+                    <p
+                    data-tooltip="Удача влияет на поиск предметов и результат исходов некоторых действий"
+                    >{luckOrNot}</p>
                 </div>
                 <div>
-                    <p>
-                        {observancy}
-                    </p>
+                    <p
+                    data-tooltip="Внимательность: зависит от состояния и способности видеть в темноте с факелом или без"
+                    >{observancy}</p>
                     <p>{health === 'Мёртв' ? ' ' : `Изготовление ${whatCrafts} предметов из подручных средств`}
                     </p>
                 </div>
